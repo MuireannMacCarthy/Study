@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Testing</string>
+    
+    <string-array name="country_names">
+        <item>India</item>
+        <item>Ireland</item>
+        <item>Romania</item>
+        <item>Italy</item>
+    </string-array>
+
+</resources>
