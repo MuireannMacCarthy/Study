@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">Testing</string>
     
-    <string-array name="country_names">
-        <item>India</item>
-        <item>Ireland</item>
-        <item>Romania</item>
-        <item>Italy</item>
+    <string-array name="assignment_names">
+        <item>Assignment1</item>
+        <item>Assignment2</item>
+        <item>Assignment3</item>
+        <item>Assignment4</item>
     </string-array>
+
+    <string name="Open">NavBar</string>
+    <string name="Close">NavBar</string>
 
 </resources>
