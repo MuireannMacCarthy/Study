@@ -17,3 +17,5 @@
     android:icon="@drawable/ic_edit_black_24dp">
         </item>
 </menu>
+
+    <!-- NavBar tutorial: https://www.youtube.com/watch?v=0WC0VU0hw2w-->

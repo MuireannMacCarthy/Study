@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Testing</string>
+    <string name="app_name">StudyBuddy</string>
     
     <string-array name="assignment_names">
         <item>Assignment1</item>
