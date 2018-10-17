@@ -38,6 +38,7 @@
         android:drawableRight="@drawable/ic_favorite_border_black_24dp"/>
     <!-- button tutorial: https://abhiandroid.com/ui/button-->
 
+
 </RelativeLayout>
     
     <android.support.design.widget.NavigationView

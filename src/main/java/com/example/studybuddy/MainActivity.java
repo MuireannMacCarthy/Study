@@ -11,11 +11,15 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout dl;
     private ActionBarDrawerToggle abdt;
+    Button enrolButton;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         abdt.setDrawerIndicatorEnabled(true);
         dl.addDrawerListener(abdt);
         abdt.syncState();
+
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -62,6 +67,18 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+        Button enrol = (Button) findViewById(R.id.enrolButton);
+        enrol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "you are now enrolled", Toast.LENGTH_LONG).show();
+            }
+        });
+//       button tutorial: https://abhiandroid.com/ui/button
+
+
     }
 
     @Override
