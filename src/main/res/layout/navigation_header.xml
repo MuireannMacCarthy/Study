@@ -10,7 +10,7 @@
         android:layout_height="150dp"
         android:layout_marginBottom="15dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/ic_android_black_24dp"/>
+        android:background="@drawable/ic_adb_black_24dp"/>
 </LinearLayout>
 
     <!-- NavBar tutorial: https://www.youtube.com/watch?v=0WC0VU0hw2w-->
