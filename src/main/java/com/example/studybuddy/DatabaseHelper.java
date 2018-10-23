@@ -3,6 +3,9 @@ package com.example.studybuddy;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import java.util.ArrayList;
+import java.util.List;
+import android.database.Cursor;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -29,6 +32,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME );
         onCreate(db);
     }
-}
+
 
 //tutorial for creating form with database: https://www.youtube.com/watch?v=B2avB5tmTMM
+
+    public List<String> getAssignments(){
+        List<String> labels = new ArrayList<String>();
+
+        // Select All Query
+        String selectQuery = "SELECT * FROM " + TABLE_NAME;
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                labels.add(cursor.getString(1));
+            } while (cursor.moveToNext());
+        }
+
+        // closing connection
+        cursor.close();
+        db.close();
+
+        // returning lables
+        return labels;
+    }
+
+
+}
