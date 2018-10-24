@@ -3,6 +3,7 @@ package com.example.studybuddy;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -75,14 +76,12 @@ public class MainActivity extends AppCompatActivity {
         assignmentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                 db = openHelper.getWritableDatabase();
                 String name = _txtname.getText().toString();
-                String dueDate = _txtduedate.getText().toString();
+                String dueData = _txtduedate.getText().toString();
                 String description = _txtdescription.getText().toString();
-                String percentWorth = _txtpercentworth.getText().toString();
-                insertData(name, dueDate, description, percentWorth);
+                Integer percentWorth = Integer.valueOf(_txtpercentworth.getText().toString());
+                insertData(name, dueData, description, percentWorth);
                 Toast.makeText(getApplicationContext(), "assignment is added", Toast.LENGTH_LONG).show();
                 loadSpinnerData();
             }
@@ -176,14 +175,28 @@ public class MainActivity extends AppCompatActivity {
 
 
     // method that inserts value from form into database
-    public void insertData(String name, String dueDate, String description, String percentWorth){
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(DatabaseHelper.COL_2, name);
-        contentValues.put(DatabaseHelper.COL_3, dueDate);
-        contentValues.put(DatabaseHelper.COL_4, description);
-        contentValues.put(DatabaseHelper.COL_5, percentWorth);
-        long id = db.insert(DatabaseHelper.TABLE_NAME, null, contentValues);
+    public void insertData(String name, String dueData, String description, Integer percentWorth){
+        try {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(DatabaseHelper.COL_2, name);
+            contentValues.put(DatabaseHelper.COL_3, dueData);
+            contentValues.put(DatabaseHelper.COL_4, description);
+            contentValues.put(DatabaseHelper.COL_5, percentWorth);
+            long id = db.insert(DatabaseHelper.TABLE_NAME, null, contentValues);
+            Toast.makeText(MainActivity.this,"New row added, row id: " + id + name + dueData + description + percentWorth, Toast.LENGTH_SHORT).show();
+        } catch (Exception e){
+            e.printStackTrace();
+            Toast.makeText(MainActivity.this,"Something wrong", Toast.LENGTH_SHORT).show();
+        }
+
+//        if(id != -1)
+//            Toast.makeText(MainActivity.this,"New row added, row id: " + id, Toast.LENGTH_SHORT).show();
+//        else
+//            Toast.makeText(MainActivity.this,"Something wrong", Toast.LENGTH_SHORT).show();
+
+
     }
+
 
 
 

@@ -22,9 +22,8 @@
             android:id="@+id/spin"
             android:layout_width="174dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:layout_below="@+id/enrolButton"
-            android:layout_marginStart="14dp"
             android:entries="@array/assignment_names"
             android:padding="15dp"
             android:textSize="20sp">
@@ -45,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_alignTop="@+id/textView"
+            android:layout_alignParentTop="true"
             android:drawableRight="@drawable/ic_favorite_border_black_24dp"
             android:gravity="center_vertical"
             android:padding="15dp"
@@ -71,12 +70,9 @@
             android:id="@+id/textView"
             android:layout_width="230dp"
             android:layout_height="68dp"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="130dp"
-            android:layout_marginTop="11dp"
-            android:text="comp10280 Programming"
-            android:textSize="16sp"
+            android:textSize="19sp"
             android:textStyle="bold"
             app:fontFamily="sans-serif"
             tools:text="COMP10280 Introduction to Programming" />
@@ -112,7 +108,7 @@
             android:layout_marginTop="214dp"
             android:ems="10"
             android:hint="DATE"
-            android:inputType="date" />
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/txtpercentworth"
@@ -131,17 +127,16 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="13dp"
-            android:layout_marginStart="23dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="13dp"
             android:text="Topic One" />
 
         <Button
             android:id="@+id/topic2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/topic1"
-            android:layout_marginEnd="122dp"
+            android:layout_centerHorizontal="true"
             android:text="Topic Two" />
 
         <Button
@@ -150,6 +145,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/topic1"
+            android:layout_marginEnd="12dp"
             android:text="Topic Three" />
 
         <!-- button tutorial: https://abhiandroid.com/ui/button-->

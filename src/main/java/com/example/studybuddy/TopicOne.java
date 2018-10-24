@@ -37,7 +37,6 @@ public class TopicOne extends AppCompatActivity {
                 int id = item.getItemId();
 
                 if( id == R.id.myprofile){
-                    Toast.makeText(TopicOne.this, "MyProfile", Toast.LENGTH_SHORT).show();
                     openMainActivity();
                 }
                 else if( id == R.id.study){

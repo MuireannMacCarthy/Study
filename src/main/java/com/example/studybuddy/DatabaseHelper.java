@@ -13,7 +13,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String TABLE_NAME="createAssignment";
     public static final String COL_1="ID";
     public static final String COL_2="name";
-    public static final String COL_3="dueDate";
+    public static final String COL_3="dueData";
     public static final String COL_4="description";
     public static final String COL_5="percentageWorth";
 
