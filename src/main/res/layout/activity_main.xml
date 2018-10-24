@@ -10,125 +10,135 @@
     android:id="@+id/dl">
     <!-- NavBar tutorial: https://www.youtube.com/watch?v=0WC0VU0hw2w-->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-
-    <android.support.v7.widget.AppCompatSpinner
-        android:id="@+id/spin"
-        android:layout_width="174dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="93dp"
-        android:entries="@array/assignment_names"
-        android:padding="15dp"
-        android:textSize="20sp">
-
-    </android.support.v7.widget.AppCompatSpinner>
-    <!-- Spinner tutorial: https://www.youtube.com/watch?v=NoSri0OSOaA-->
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="157dp" />
-
-    <Button
-        android:id="@+id/enrolButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/textView"
-        android:drawableRight="@drawable/ic_favorite_border_black_24dp"
-        android:gravity="center_vertical"
-        android:padding="15dp"
-        android:text="Enrol Me"
-        android:textColor="#f00"
-        android:textSize="16sp" />
-    <!-- button tutorial: https://abhiandroid.com/ui/button-->
-
-    <Button
-        android:id="@+id/assignmentButton"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="14dp"
-        android:drawableRight="@drawable/ic_library_books_black_24dp"
-        android:padding="15dp"
-        android:text="Add Assignment"
-        android:textColor="#f00"
-        android:textSize="16sp" />
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="230dp"
-        android:layout_height="68dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="130dp"
-        android:layout_marginTop="11dp"
-        android:text="TextView"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:fontFamily="sans-serif"
-        tools:text="COMP10280 Introduction to Programming" />
 
-    <EditText
-        android:id="@+id/txtname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="193dp"
-        android:ems="10"
-        android:hint="NAME"
-        android:inputType="textPersonName" />
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spin"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/enrolButton"
+            android:layout_marginStart="14dp"
+            android:entries="@array/assignment_names"
+            android:padding="15dp"
+            android:textSize="20sp">
 
-    <EditText
-        android:id="@+id/txtdescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="145dp"
-        android:layout_toStartOf="@+id/enrolButton"
-        android:ems="10"
-        android:hint="DESCRIPTION"
-        android:inputType="textPersonName" />
+        </android.support.v7.widget.AppCompatSpinner>
+        <!-- Spinner tutorial: https://www.youtube.com/watch?v=NoSri0OSOaA-->
 
-    <EditText
-        android:id="@+id/txtduedate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="208dp"
-        android:layout_toStartOf="@+id/enrolButton"
-        android:ems="10"
-        android:hint="DATE"
-        android:inputType="date" />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="127dp" />
 
-    <EditText
-        android:id="@+id/txtpercentworth"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="80dp"
-        android:ems="10"
-        android:hint="PERCENTAGE WORTH"
-        android:inputType="number" />
+        <Button
+            android:id="@+id/enrolButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/textView"
+            android:drawableRight="@drawable/ic_favorite_border_black_24dp"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:text="Enrol Me"
+            android:textColor="#f00"
+            android:textSize="16sp" />
+        <!-- button tutorial: https://abhiandroid.com/ui/button-->
 
-    <!-- button tutorial: https://abhiandroid.com/ui/button-->
+        <Button
+            android:id="@+id/assignmentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/txtpercentworth"
+            android:layout_marginTop="-130dp"
+            android:drawableRight="@drawable/ic_library_books_black_24dp"
+            android:padding="15dp"
+            android:text="Add Assignment"
+            android:textColor="#f00"
+            android:textSize="16sp" />
 
-</RelativeLayout>
-    
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="230dp"
+            android:layout_height="68dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="130dp"
+            android:layout_marginTop="11dp"
+            android:text="comp10280 Programming"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:fontFamily="sans-serif"
+            tools:text="COMP10280 Introduction to Programming" />
+
+        <EditText
+            android:id="@+id/txtname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="161dp"
+            android:ems="10"
+            android:hint="NAME"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/txtdescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="192dp"
+            android:ems="10"
+            android:hint="DESCRIPTION"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/txtduedate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="214dp"
+            android:ems="10"
+            android:hint="DATE"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/txtpercentworth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="130dp"
+            android:ems="10"
+            android:hint="PERCENTAGE WORTH"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/topic1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="13dp"
+            android:layout_marginStart="23dp"
+            android:text="Topic One" />
+
+        <!-- button tutorial: https://abhiandroid.com/ui/button-->
+
+    </RelativeLayout>
+
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

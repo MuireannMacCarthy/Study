@@ -1,6 +1,7 @@
 package com.example.studybuddy;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     SQLiteDatabase db;
     EditText _txtname, _txtduedate, _txtdescription, _txtpercentworth;
     Spinner spinner;
+    private Button topic1;
 
 
 
@@ -62,11 +64,9 @@ public class MainActivity extends AppCompatActivity {
         _txtduedate = (EditText)findViewById(R.id.txtduedate);
         _txtdescription = (EditText)findViewById(R.id.txtdescription);
         _txtpercentworth = (EditText)findViewById(R.id.txtpercentworth);
+        topic1 = (Button)findViewById(R.id.topic1);
 
         spinner = (Spinner) findViewById(R.id.spinner);
-
-
-
 
 
         // event to add values from form into database when assignment button is clicked
@@ -138,8 +138,18 @@ public class MainActivity extends AppCompatActivity {
         });
 //       button tutorial: https://abhiandroid.com/ui/button
 
+        topic1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivityTopicOne();
+            }
+        });
 
+    }
 
+    public void openActivityTopicOne(){
+        Intent intent = new Intent(this, TopicOne.class);
+        startActivity(intent);
     }
 
 
