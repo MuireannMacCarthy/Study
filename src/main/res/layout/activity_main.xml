@@ -89,7 +89,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="161dp"
             android:ems="10"
-            android:hint="NAME"
+            android:hint="ASSIGNMENT NAME"
             android:inputType="textPersonName" />
 
         <EditText
@@ -135,6 +135,23 @@
             android:layout_marginStart="23dp"
             android:text="Topic One" />
 
+        <Button
+            android:id="@+id/topic2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/topic1"
+            android:layout_marginEnd="122dp"
+            android:text="Topic Two" />
+
+        <Button
+            android:id="@+id/topic3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/topic1"
+            android:text="Topic Three" />
+
         <!-- button tutorial: https://abhiandroid.com/ui/button-->
 
     </RelativeLayout>
@@ -147,13 +164,6 @@
         app:headerLayout="@layout/navigation_header"
         app:menu="@menu/navigation_menu">
 
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
     </android.support.design.widget.NavigationView>
     <!-- NavBar tutorial: https://www.youtube.com/watch?v=0WC0VU0hw2w-->
 

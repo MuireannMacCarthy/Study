@@ -26,7 +26,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="22dp"
             android:layout_marginTop="44dp"
-            android:text="Welcome to topic one" />
+            android:text="Welcome to topic two" />
     </RelativeLayout>
 
     <android.support.design.widget.NavigationView
@@ -36,6 +36,7 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/navigation_header"
         app:menu="@menu/navigation_menu">
+
 
     </android.support.design.widget.NavigationView>
     <!-- NavBar tutorial: https://www.youtube.com/watch?v=0WC0VU0hw2w-->

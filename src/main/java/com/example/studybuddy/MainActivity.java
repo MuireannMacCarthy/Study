@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     SQLiteDatabase db;
     EditText _txtname, _txtduedate, _txtdescription, _txtpercentworth;
     Spinner spinner;
-    private Button topic1;
+    private Button topic1, topic2, topic3;
 
 
 
@@ -65,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
         _txtdescription = (EditText)findViewById(R.id.txtdescription);
         _txtpercentworth = (EditText)findViewById(R.id.txtpercentworth);
         topic1 = (Button)findViewById(R.id.topic1);
+        topic2 = (Button)findViewById(R.id.topic2);
+        topic3 = (Button)findViewById(R.id.topic3);
 
         spinner = (Spinner) findViewById(R.id.spinner);
 
@@ -144,11 +146,31 @@ public class MainActivity extends AppCompatActivity {
                 openActivityTopicOne();
             }
         });
+        topic2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivityTopicTwo();
+            }
+        });
+        topic3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivityTopicThree();
+            }
+        });
 
     }
 
     public void openActivityTopicOne(){
         Intent intent = new Intent(this, TopicOne.class);
+        startActivity(intent);
+    }
+    public void openActivityTopicTwo(){
+        Intent intent = new Intent(this, TopicTwo.class);
+        startActivity(intent);
+    }
+    public void openActivityTopicThree(){
+        Intent intent = new Intent(this, TopicThree.class);
         startActivity(intent);
     }
 
