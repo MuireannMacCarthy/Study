@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity  {
                 Integer percentWorth = Integer.valueOf(_txtpercentworth.getText().toString());
                 insertData(name, dueData, description, percentWorth);
                 Toast.makeText(getApplicationContext(), "assignment is added", Toast.LENGTH_LONG).show();
-                loadSpinnerData();
+                loadAssignmentData();
             }
         });
 
@@ -137,6 +137,7 @@ public class MainActivity extends AppCompatActivity  {
                 Toast.makeText(getApplicationContext(), "you are now enrolled", Toast.LENGTH_LONG).show();
             }
         });
+
 //       button tutorial: https://abhiandroid.com/ui/button
 
         topic1.setOnClickListener(new View.OnClickListener() {
@@ -199,41 +200,19 @@ public class MainActivity extends AppCompatActivity  {
         return abdt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 
-    private void loadSpinnerData() {
-        // database handler
+    // function to load data from database into spinner (drop down menu)
+    private void loadAssignmentData() {
         DatabaseHelper db = new DatabaseHelper(getApplicationContext());
-
-        // Spinner Drop down elements
-        List <String> lables = db.getAssignments();
-
-        // Creating adapter for spinner
+        List <String> assignment = db.getAssignments();
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, lables);
-
-        // Drop down layout style - list view with radio button
+                android.R.layout.simple_spinner_item, assignment);
         dataAdapter
                 .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        // attaching data adapter to spinner
         spinner.setAdapter(dataAdapter);
+
+        // tutorial to get data from database into spinner: https://www.androidhive.info/2012/06/android-populating-spinner-data-from-sqlite-database/
     }
-
-//    @Override
-//    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//        // On selecting a spinner item
-//        String label = parent.getItemAtPosition(position).toString();
-//
-//        // Showing selected spinner item
-//        Toast.makeText(parent.getContext(), "You selected: " + label,
-//                Toast.LENGTH_LONG).show();
-//
-//    }
-//
-//    @Override
-//    public void onNothingSelected(AdapterView<?> parent) {
-//
-//    }
-
 
 }
 

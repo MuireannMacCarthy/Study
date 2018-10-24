@@ -1,5 +1,4 @@
 package com.example.studybuddy;
-
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -33,31 +32,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+//tutorial for database and table : https://www.youtube.com/watch?v=B2avB5tmTMM
 
-//tutorial for creating form with database: https://www.youtube.com/watch?v=B2avB5tmTMM
 
+    // method to get loop through assignment names in DB and return assignment names when called
     public List<String> getAssignments(){
-        List<String> labels = new ArrayList<String>();
+        List<String> assignmentNames = new ArrayList<String>();
 
-        // Select All Query
         String selectQuery = "SELECT * FROM " + TABLE_NAME;
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
 
-        // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                labels.add(cursor.getString(1));
+                assignmentNames.add(cursor.getString(1));
             } while (cursor.moveToNext());
         }
 
-        // closing connection
         cursor.close();
         db.close();
 
-        // returning lables
-        return labels;
+        return assignmentNames;
+
+        // tutorial on adding from database into spinner: https://www.androidhive.info/2012/06/android-populating-spinner-data-from-sqlite-database/
     }
 
 
