@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 
 
-// implements OnItemSelectedListener
+
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -47,8 +47,6 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        spinner.setOnItemSelectedListener(this);
-
 
         // initialising variables
         dl = (DrawerLayout)findViewById(R.id.dl);
@@ -58,7 +56,7 @@ public class MainActivity extends AppCompatActivity  {
         abdt.syncState();
 
 
-        // initialising variables for assignment form
+        // initialising variables for assignment form and forum links
         assignmentButton = (Button)findViewById(R.id.assignmentButton);
         openHelper = new DatabaseHelper(this);
         _txtname = (EditText)findViewById(R.id.txtname);
@@ -68,9 +66,8 @@ public class MainActivity extends AppCompatActivity  {
         topic1 = (Button)findViewById(R.id.topic1);
         topic2 = (Button)findViewById(R.id.topic2);
         topic3 = (Button)findViewById(R.id.topic3);
-
         spinner = (Spinner) findViewById(R.id.spinner);
-
+        loadAssignmentData();
 
         // event to add values from form into database when assignment button is clicked
         assignmentButton.setOnClickListener(new View.OnClickListener() {
@@ -217,4 +214,3 @@ public class MainActivity extends AppCompatActivity  {
 }
 
 
-// tutorial to get data from database into spinner: https://www.androidhive.info/2012/06/android-populating-spinner-data-from-sqlite-database/
