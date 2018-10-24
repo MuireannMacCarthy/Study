@@ -26,7 +26,7 @@ import java.util.ArrayList;
 
 // implements OnItemSelectedListener
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
     private DrawerLayout dl;
     private ActionBarDrawerToggle abdt;
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 //        spinner.setOnItemSelectedListener(this);
-//        loadSpinnerData();
+
 
         // initialising variables
         dl = (DrawerLayout)findViewById(R.id.dl);
@@ -189,12 +189,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this,"Something wrong", Toast.LENGTH_SHORT).show();
         }
 
-//        if(id != -1)
-//            Toast.makeText(MainActivity.this,"New row added, row id: " + id, Toast.LENGTH_SHORT).show();
-//        else
-//            Toast.makeText(MainActivity.this,"Something wrong", Toast.LENGTH_SHORT).show();
-
-
     }
 
 
@@ -239,6 +233,8 @@ public class MainActivity extends AppCompatActivity {
 //    public void onNothingSelected(AdapterView<?> parent) {
 //
 //    }
+
+
 }
 
 
